@@ -12,6 +12,10 @@
 
 `oc new-project {{project_name}}`
 
+- Switch to an existing project:
+
+`oc project {{project_name}}`
+
 - Add a new application to a project:
 
 `oc new-app {{repo_url}} --name {{application}}`
@@ -24,6 +28,6 @@
 
 `oc get pods`
 
-- Logout from the current session:
+- Log out from the current session:
 
 `oc logout`

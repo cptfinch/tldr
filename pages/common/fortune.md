@@ -1,6 +1,7 @@
 # fortune
 
 > Print a random quotation (fortune-cookie style).
+> More information: <https://manned.org/fortune>.
 
 - Print a quotation:
 

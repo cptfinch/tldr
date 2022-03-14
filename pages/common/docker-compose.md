@@ -1,7 +1,7 @@
 # docker-compose
 
 > Run and manage multi container docker applications.
-> More information: <https://docs.docker.com/compose/reference/overview/>.
+> More information: <https://docs.docker.com/compose/reference/>.
 
 - List all running containers:
 
@@ -30,3 +30,7 @@
 - Follow logs for all containers:
 
 `docker-compose logs --follow`
+
+- Follow logs for a specific container:
+
+`docker-compose logs --follow {{container_name}}`

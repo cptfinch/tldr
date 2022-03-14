@@ -2,6 +2,7 @@
 
 > Print and concatenate files.
 > A `cat` clone with syntax highlighting and Git integration.
+> More information: <https://github.com/sharkdp/bat>.
 
 - Print the contents of a file to the standard output:
 
@@ -19,7 +20,7 @@
 
 `bat -n {{file}}`
 
-- Syntax highlight a json file:
+- Syntax highlight a JSON file:
 
 `bat --language json {{file.json}}`
 

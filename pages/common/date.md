@@ -1,6 +1,7 @@
 # date
 
 > Set or display the system date.
+> More information: <https://www.gnu.org/software/coreutils/date>.
 
 - Display the current date using the default locale's format:
 
@@ -21,3 +22,11 @@
 - Convert a specific date to the Unix timestamp format:
 
 `date -d "{{2018-09-01 00:00}}" +%s --utc`
+
+- Display the current date using the RFC-3339 format (`YYYY-MM-DD hh:mm:ss TZ`):
+
+`date --rfc-3339=s`
+
+- Set the current date using the format `MMDDhhmmYYYY.ss` (`YYYY` and `.ss` are optional):
+
+`date {{093023592021.59}}`

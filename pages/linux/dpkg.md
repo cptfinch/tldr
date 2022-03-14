@@ -1,6 +1,8 @@
 # dpkg
 
 > Debian package manager.
+> Some subcommands such as `dpkg deb` have their own usage documentation.
+> More information: <https://manpages.debian.org/latest/dpkg/dpkg.html>.
 
 - Install a package:
 
@@ -14,7 +16,7 @@
 
 `dpkg -l {{pattern}}`
 
-- List package contents:
+- List a package's contents:
 
 `dpkg -L {{package_name}}`
 
@@ -24,4 +26,4 @@
 
 - Find out which package owns a file:
 
-`dpkg -S {{file_name}}`
+`dpkg -S {{filename}}`

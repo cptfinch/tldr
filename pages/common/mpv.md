@@ -7,6 +7,10 @@
 
 `mpv {{file}}`
 
+- Play a video or audio file from a URL:
+
+`mpv '{{https://www.youtube.com/watch?v=dQw4w9WgXcQ}}'`
+
 - Jump backward/forward 5 seconds:
 
 `LEFT <or> RIGHT`
@@ -15,7 +19,7 @@
 
 `DOWN <or> UP`
 
-- Decrease or increase playback speed by 10 %:
+- Decrease or increase playback speed by 10%:
 
 `[ <or> ]`
 
@@ -26,3 +30,7 @@
 - Play a file using a profile defined in the `mpv.conf` file:
 
 `mpv --profile {{profile_name}} {{file}}`
+
+- Display the output of webcam or other video input device:
+
+`mpv /dev/{{video0}}`

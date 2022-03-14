@@ -2,6 +2,7 @@
 
 > Secure Shell est un protocole utilisé pour se connecter de façon sécurisée à des systèmes distants.
 > On peut l'utiliser pour se connecter ou exécuter des commandes sur un serveur distant.
+> Plus d'informations : <https://man.openbsd.org/ssh>.
 
 - Se connecter à un serveur distant :
 
@@ -19,9 +20,9 @@
 
 `ssh {{hote_distant}} {{commande -avec -options}}`
 
-- Tunnel SSH : Transfert par port dynamique (le SOCKS proxy se trouve sur localhost:9999) :
+- Tunnel SSH : Transfert par port dynamique (le SOCKS proxy se trouve sur localhost:1080) :
 
-`ssh -D {{9999}} -C {{utilisateur}}@{{hote_distant}}`
+`ssh -D {{1080}} {{utilisateur}}@{{hote_distant}}`
 
 - Tunnel SSH : Transfère un port spécifique (localhost:9999 vers example.org:80) en désactivant l'allocation de pseudo-[t]ty et l'exécution de commandes distantes :
 

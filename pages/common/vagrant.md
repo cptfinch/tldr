@@ -7,9 +7,9 @@
 
 `vagrant init`
 
-- Create Vagrantfile with the Ubuntu 14.04 (Trusty Tahr) box from HashiCorp Atlas:
+- Create Vagrantfile with the Ubuntu 20.04 (Focal Fossa) box from HashiCorp Atlas:
 
-`vagrant init ubuntu/trusty32`
+`vagrant init ubuntu/focal64`
 
 - Start and provision the vagrant environment:
 
@@ -26,3 +26,11 @@
 - Connect to machine via SSH:
 
 `vagrant ssh`
+
+- Output the SSH configuration file of the running Vagrant machine:
+
+`vagrant ssh-config`
+
+- List all local boxes:
+
+`vagrant box list`

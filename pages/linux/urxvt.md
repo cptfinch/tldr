@@ -2,6 +2,7 @@
 
 > Rxvt-unicode.
 > A customizable terminal emulator.
+> More information: <https://manned.org/urxvt>.
 
 - Open a new urxvt window:
 
@@ -19,6 +20,6 @@
 
 `urxvt --hold -e {{command}}`
 
-- Run a command within the "sh" shell:
+- Run a command within the `sh` shell:
 
 `urxvt -e {{sh}} -c {{command}}`

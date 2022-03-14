@@ -2,7 +2,7 @@
 
 > Tool for managing parallel versions of multiple Software Development Kits.
 > Supports Java, Groovy, Scala, Kotlin, Gradle, Maven, Vert.x and many others.
-> More information: <https://developer.android.com/studio/command-line/sdkmanager>.
+> More information: <https://sdkman.io/usage>.
 
 - Install a specific version of Gradle:
 
@@ -19,6 +19,14 @@
 - List all Software Development Kits available to install:
 
 `sdk list`
+
+- List all available versions for a specific Software Development Kit:
+
+`sdk list {{sdk_name}}`
+
+- List all installed Software Development Kits:
+
+`sdk current`
 
 - Update Gradle to the latest version:
 

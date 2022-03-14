@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: MIT
 
-# This script is executed by Travis CI for every pull request opened.
+# This script is executed by GitHub Actions for every pull request opened.
 # It currently accomplishes the following objectives (for English pages only):
 #
 #  1. Detect pages that were just copied (i.e. cp pages/{common,linux}/7z.md).
@@ -49,7 +50,7 @@ function check_diff {
   local line
   local entry
 
-  git_diff=$(git diff --name-status --find-copies-harder --diff-filter=AC --relative=pages/ master)
+  git_diff=$(git diff --name-status --find-copies-harder --diff-filter=AC --relative=pages/ remotes/origin/main)
 
   if [ -n "$git_diff" ]; then
     echo -e "Check PR: git diff:\n$git_diff" >&2
@@ -110,7 +111,7 @@ MSG_NOT_MD='The file `%s` does not have a `.md` extension.\n'
 
 PLATFORMS=$(ls pages/)
 
-if [ "$TRAVIS" = "true" ] && [ "$TRAVIS_REPO_SLUG" = "tldr-pages/tldr" ] && [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+if [ "$CI" = "true" ] && [ "$GITHUB_REPOSITORY" = "tldr-pages/tldr" ] && [ "$PULL_REQUEST_ID" != "" ]; then
   check_diff
   check_structure
 else

@@ -2,7 +2,7 @@
 
 > Fast Node.js version manager.
 > Install, uninstall or switch between Node.js versions.
-> More info: <https://github.com/Schniz/fnm>.
+> More information: <https://github.com/Schniz/fnm>.
 
 - Install a specific version of Node.js:
 
@@ -10,7 +10,7 @@
 
 - List all available Node.js versions and highlight the default one:
 
-`fnm ls`
+`fnm list`
 
 - Use a specific version of Node.js in the current shell:
 

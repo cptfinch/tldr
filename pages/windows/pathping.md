@@ -1,13 +1,13 @@
 # pathping
 
 > A trace route tool combining features of `ping` and `tracert`.
-> More information: <https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pathping>.
+> More information: <https://docs.microsoft.com/windows-server/administration/windows-commands/pathping>.
 
 - Ping and trace the route to a host:
 
 `pathping {{hostname}}`
 
-- Do not perform reverse lookup of ip-address to hostname:
+- Do not perform reverse lookup of IP address to hostname:
 
 `pathping {{hostname}} -n`
 

@@ -1,8 +1,9 @@
 # sd
 
-> `sd` is an intuitive find & replace CLI.
+> Intuitive find & replace CLI.
+> More information: <https://github.com/chmln/sd>.
 
-- Trim some whitespace using regex:
+- Trim some whitespace using a regular expression:
 
 `{{echo 'lorem ipsum 23   '}} | sd '\s+$' ''`
 
@@ -10,10 +11,10 @@
 
 `{{echo 'cargo +nightly watch'}} | sd '(\w+)\s+\+(\w+)\s+(\w+)' 'cmd: $1, channel: $2, subcmd: $3'`
 
-- Find and replace in a file:
+- Find and replace in a file printing the result to stdout:
 
-`sd -i {{'window.fetch'}} {{'fetch'}} {{http.js}}`
+`sd -p {{'window.fetch'}} {{'fetch'}} {{http.js}}`
 
-- Find and replace across a project:
+- Find and replace across a project changing each file in place:
 
-`sd -i {{'from "react"'}} {{'from "preact"'}} $(find . -type f)`
+`sd {{'from "react"'}} {{'from "preact"'}} $(find . -type f)`

@@ -1,27 +1,37 @@
 # if
 
-> Simple shell conditional.
+> Performs conditional processing in shell scripts.
+> See also: `test`, `[`.
+> More information: <https://www.gnu.org/software/bash/manual/bash.html#Conditional-Constructs>.
 
-- Echo a different thing depending on a command's success:
+- Execute the specified commands if the condition command's exit status is zero:
 
-`{{command}} && echo "success" || echo "failure"`
+`if {{condition_command}}; then {{echo "Condition is true"}}; fi`
 
-- Full if syntax:
+- Execute the specified commands if the condition command's exit status is not zero:
 
-`if {{condition}}; then echo "true"; else echo "false"; fi`
+`if ! {{condition_command}}; then {{echo "Condition is true"}}; fi`
 
-- List available if conditions:
+- Execute the first specified commands if the condition command's exit status is zero otherwise execute the second specified commands:
 
-`help test`
+`if {{condition_command}}; then {{echo "Condition is true"}}; else {{echo "Condition is false"}}; fi`
 
-- Test if a given variable is empty:
+- Check whether a [f]ile exists:
 
-`if [[ -z $GIT_BRANCH ]]; then echo "true"; else echo "false"; fi`
+`if [[ -f {{path/to/file}} ]]; then {{echo "Condition is true"}}; fi`
 
-- Test if a file exists:
+- Check whether a [d]irectory exists:
 
-`if [[ -e {{filename}} ]]; then echo "true"; else echo "false"; fi`
+`if [[ -d {{path/to/directory}} ]]; then {{echo "Condition is true"}}; fi`
 
-- If directory not exists:
+- Check whether a file or directory [e]xists:
 
-`if [[ ! -d {{path/to/directory}} ]]; then echo "true"; else echo "false"; fi`
+`if [[ -e {{path/to/file_or_directory}} ]]; then {{echo "Condition is true"}}; fi`
+
+- Check whether a variable is defined:
+
+`if [[ -n "${{variable}}" ]]; then {{echo "Condition is true"}}; fi`
+
+- List all possible conditions (`test` is an alias to `[`; both are commonly used with `if`):
+
+`man [`

@@ -1,6 +1,7 @@
 # ac
 
 > Print statistics on how long users have been connected.
+> More information: <https://www.gnu.org/software/acct/manual/accounting.html#ac>.
 
 - Print how long the current user has been connected in hours:
 
@@ -17,3 +18,7 @@
 - Print how long a particular user has been connected in hours per day (with total):
 
 `ac --daily-totals --individual-totals {{username}}`
+
+- Also display additional details:
+
+`ac --compatibility`

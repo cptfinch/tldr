@@ -2,6 +2,7 @@
 
 > Uncomplicated Firewall.
 > Frontend for iptables aiming to make configuration of a firewall easier.
+> More information: <https://wiki.ubuntu.com/UncomplicatedFirewall>.
 
 - Enable ufw:
 
@@ -17,7 +18,7 @@
 
 - Allow incoming traffic on port 5432 on this host with a comment identifying the service:
 
-`ufw allow {{5432}} comment {{"Service"}}`
+`ufw allow {{5432}} comment "{{Service}}"`
 
 - Allow only TCP traffic from 192.168.0.4 to any address on this host, on port 22:
 

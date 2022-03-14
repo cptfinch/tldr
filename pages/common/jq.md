@@ -7,9 +7,13 @@
 
 `jq . {{file.json}}`
 
-- Output all elements from arrays (or all key-value pairs from objects) in a JSON file:
+- Output all elements from arrays (or all the values from objects) in a JSON file:
 
 `jq '.[]' {{file.json}}`
+
+- Output elements from arrays which match provided filter:
+
+`jq '.[] | select(.{{key_name}} == {{value}})'`
 
 - Read JSON objects from a file into an array, and output it (inverse of `jq .[]`):
 
@@ -19,17 +23,13 @@
 
 `jq '.[0]' {{file.json}}`
 
-- Output the value of a given key of the first element in a JSON text from `stdin`:
-
-`cat {{file.json}} | jq '.[0].{{key_name}}'`
-
-- Output the value of a given key of each element in a JSON text from `stdin`:
+- Output the value of a given key of each element in a JSON text from stdin:
 
 `cat {{file.json}} | jq 'map(.{{key_name}})'`
 
-- Combine multiple filters:
+- Output the value of multiple keys as a new JSON object (assuming the input JSON has the keys `key_name` and `other_key_name`):
 
-`cat {{file.json}} | jq 'unique | sort | reverse'`
+`cat {{file.json}} | jq '{{{my_new_key}}: .{{key_name}}, {{my_other_key}}: .{{other_key_name}}}'`
 
 - Output the value of a given key to a string (and disable JSON output):
 

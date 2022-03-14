@@ -1,7 +1,7 @@
 # sfc
 
 > Scans the integrity of Windows system files.
-> More information: <https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/sfc>.
+> More information: <https://docs.microsoft.com/windows-server/administration/windows-commands/sfc>.
 
 - Display information about the usage of the command:
 
@@ -25,8 +25,8 @@
 
 - When repairing offline, specify the boot directory:
 
-`sfc /offbootdir={{path/to/dir}}`
+`sfc /offbootdir={{path/to/directory}}`
 
 - When repairing offline, specify the Windows directory:
 
-`sfc /offwindir={{path/to/dir}}`
+`sfc /offwindir={{path/to/directory}}`

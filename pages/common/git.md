@@ -1,20 +1,29 @@
 # git
 
 > Distributed version control system.
+> Some subcommands such as `commit`, `add`, `branch`, `checkout`, `push`, etc. have their own usage documentation, accessible via `tldr git subcommand`.
 > More information: <https://git-scm.com/>.
 
 - Check the Git version:
 
 `git --version`
 
-- Call general help:
+- Show general help:
 
 `git --help`
 
-- Call help on a command:
+- Show help on a Git subcommand (like `clone`, `add`, `push`, `log`, etc.):
 
-`git help {{command}}`
+`git help {{subcommand}}`
 
-- Execute Git command:
+- Execute a Git subcommand:
 
-`git {{command}}`
+`git {{subcommand}}`
+
+- Execute a Git subcommand on a custom repository root path:
+
+`git -C {{path/to/repo}} {{subcommand}}`
+
+- Execute a Git subcommand with a given configuration set:
+
+`git -c '{{config.key}}={{value}}' {{subcommand}}`

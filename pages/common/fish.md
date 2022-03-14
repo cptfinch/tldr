@@ -1,29 +1,36 @@
 # fish
 
-> The Friendly Interactive SHell.
-> A command-line interpreter designed to be user friendly.
+> The Friendly Interactive SHell, a command-line interpreter designed to be user friendly.
 > More information: <https://fishshell.com>.
 
-- Start interactive shell:
+- Start an interactive shell session:
 
 `fish`
 
+- Start an interactive shell session without loading startup configs:
+
+`fish --no-config`
+
 - Execute a command:
 
-`fish -c "{{command}}"`
+`fish --command "{{command}}"`
 
-- Run commands from a file:
+- Execute a script:
 
-`fish {{file.fish}}`
+`fish {{path/to/script.fish}}`
 
-- Check a file for syntax errors:
+- Check a script for syntax errors:
 
-`fish --no-execute {{file.fish}}`
+`fish --no-execute {{path/to/script.fish}}`
 
-- Display version information and exit:
+- Start an interactive shell session in private mode, where the shell does not access old history or save new history:
+
+`fish --private`
+
+- Define and export an environmental variable that persists across shell restarts (builtin):
+
+`set --universal --export {{variable_name}} {{variable_value}}`
+
+- Print the version:
 
 `fish --version`
-
-- Set and export environmental variables that persist across restarts:
-
-`set -Ux {{variable_name}} {{variable_value}}`

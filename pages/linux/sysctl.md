@@ -1,6 +1,7 @@
 # sysctl
 
 > List and change kernel runtime variables.
+> More information: <https://manned.org/sysctl.8>.
 
 - Show all available variables and their values:
 
@@ -18,6 +19,6 @@
 
 `sysctl fs.file-max`
 
-- Apply changes from /etc/sysctl.conf:
+- Apply changes from `/etc/sysctl.conf`:
 
 `sysctl -p`

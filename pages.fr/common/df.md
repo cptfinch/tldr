@@ -1,8 +1,9 @@
 # df
 
 > Montre un aperçu de l'utilisation de l'espace disque.
+> Plus d'informations : <https://www.gnu.org/software/coreutils/df>.
 
-- Afficher tous les systèmes de fichiers et leur utilisation d'espace dique :
+- Afficher tous les systèmes de fichiers et leur utilisation d'espace disque :
 
 `df`
 
@@ -17,3 +18,7 @@
 - Afficher des statistiques sur le nombre d'inodes disponibles :
 
 `df -i`
+
+- Afficher les systèmes de fichiers sauf ceux de types spécifiques :
+
+`df -x {{squashfs}} -x {{tmpfs}}`

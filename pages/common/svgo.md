@@ -10,7 +10,7 @@
 
 - Optimize a file and save the result to another file:
 
-`svgo {{test.svg}} {{test.min.svg}}`
+`svgo {{test.svg}} -o {{test.min.svg}}`
 
 - Optimize all SVG files within a directory (overwrites the original files):
 
@@ -27,10 +27,6 @@
 - Optimize a file and print out the result:
 
 `svgo {{test.svg}} -o -`
-
-- Optimize a file making sure a given plugin is enabled:
-
-`svgo --enable={{plugin_name}}`
 
 - Show available plugins:
 

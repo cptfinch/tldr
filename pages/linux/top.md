@@ -1,6 +1,7 @@
 # top
 
 > Display dynamic real-time information about running processes.
+> More information: <https://manned.org/top>.
 
 - Start top:
 
@@ -13,6 +14,10 @@
 - Show only processes owned by given user:
 
 `top -u {{username}}`
+
+- Sort processes by a field:
+
+`top -o {{field_name}}`
 
 - Show the individual threads of a given process:
 

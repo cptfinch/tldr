@@ -1,6 +1,6 @@
 # uvcdynctrl
 
-> A libwebcam command line tool to manage dynamic controls in uvcvideo.
+> A libwebcam command-line tool to manage dynamic controls in uvcvideo.
 
 - List all available cameras:
 
@@ -24,8 +24,8 @@
 
 - Save the state of the current controls to a file:
 
-`uvcdynctrl -W {{file_name}}`
+`uvcdynctrl -W {{filename}}`
 
 - Load the state of the controls from a file:
 
-`uvcdynctrl -L {{file_name}}`
+`uvcdynctrl -L {{filename}}`
